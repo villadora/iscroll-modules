@@ -1,5 +1,5 @@
 {
-  "name": "iscroll-lite",
+  "name": "iscroll-main",
   "description": "Smooth scrolling for the web",
   "version": "5.1.1",
   "homepage": "http://cubiq.org/iscroll-4",
@@ -13,7 +13,7 @@
     "mobile",
     "desktop"
   ],
-  "main": "build/iscroll-lite.js",
+  "main": "build/iscroll-main.js",
   "devDependencies": {
     "jshint": "~2.3.0",
     "uglify-js": "~2.4.7",
