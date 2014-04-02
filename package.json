@@ -1,5 +1,5 @@
 {
-  "name": "iscroll",
+  "name": "iscroll-lite",
   "description": "Smooth scrolling for the web",
   "version": "5.1.1",
   "homepage": "http://cubiq.org/iscroll-4",
@@ -13,7 +13,7 @@
     "mobile",
     "desktop"
   ],
-  "main": "build/iscroll.js",
+  "main": "build/iscroll-lite.js",
   "devDependencies": {
     "jshint": "~2.3.0",
     "uglify-js": "~2.4.7"
@@ -21,6 +21,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cubiq/iscroll.git"
+  },
+  "cortex": {
+    "scripts": {
+      "prebuild": "gulp"
+    }
   },
   "bugs": {
     "url": "https://github.com/cubiq/iscroll/issues"

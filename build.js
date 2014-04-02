@@ -14,7 +14,15 @@ var releases = {
 			'default/handleEvent.js'
 		]
 	},
-
+        main : {
+                files: [
+                       'indicator/_initIndicators.js',
+                       'probe/_animate.js',
+                       'default/handleEvent.js',
+                       'indicator/indicator.js'
+                ],
+               postProcessing: [ 'indicator/build.json', 'probe/build.json' ]
+        },
 	iscroll: {
 		files: [
 			'indicator/_initIndicators.js',
@@ -67,6 +75,12 @@ var releases = {
 		postProcessing: [ 'wheel/build.json', 'snap/build.json', 'keys/build.json', 'infinite/build.json', 'probe/build.json' ]
 	}
 };
+
+
+if(require.main != module) {
+    module.exports = build;
+    return;
+}    
 
 var args = process.argv.slice(2);
 
@@ -151,5 +165,8 @@ function build (release) {
 	// Write dist file
 	var distFile = buildFile.replace('/build/', '/dist/').replace('.js', '-min.js');
 	out = uglify.minify(out, { fromString: true });
+        if(!fs.existsSync('./dist')) 
+            fs.mkdirSync('./dist');
+
 	fs.writeFileSync(distFile, banner + out.code);
 }
