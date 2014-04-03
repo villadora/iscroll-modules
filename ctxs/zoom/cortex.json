@@ -11,6 +11,7 @@
         "desktop"
     ],
     "main": "../../build/iscroll-zoom.js",
+    "readme": "include zoom, wheel, keys, snap, indicator features",
     "repository": {
         "type": "git",
         "url": "https://github.com/cubiq/iscroll.git"

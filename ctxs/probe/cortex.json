@@ -11,6 +11,7 @@
         "desktop"
     ],
     "main": "../../build/iscroll-probe.js",
+    "readme": "include probe, wheel, snap, keys, indicator features",
     "repository": {
         "type": "git",
         "url": "https://github.com/cubiq/iscroll.git"

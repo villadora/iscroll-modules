@@ -11,6 +11,7 @@
         "desktop"
     ],
     "main": "../../build/iscroll-infinite.js",
+    "readme": "include wheel, snap, keys, probe, infinite features",
     "repository": {
         "type": "git",
         "url": "https://github.com/cubiq/iscroll.git"
