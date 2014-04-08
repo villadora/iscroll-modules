@@ -287,7 +287,8 @@ IScroll.prototype = {
 			}
 
 			if ( this.options.click ) {
-				utils.click(e);
+				if(this.clickCancelable !== false) // TODO: first click still may have problem
+					utils.click(e);
 			}
 
 			this._execEvent('scrollCancel');

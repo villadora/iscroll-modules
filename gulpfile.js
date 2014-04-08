@@ -7,5 +7,9 @@ gulp.task('all', function() {
     });
 });
 
+gulp.task('watch', function() {
+    gulp.watch('src/**/*.js', ['all']);
+});
+
 
 gulp.task('default', ['all']);

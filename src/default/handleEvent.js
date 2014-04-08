@@ -39,8 +39,12 @@
 				break;
 			case 'click':
 				if ( !e._constructed ) {
-					e.preventDefault();
-					e.stopPropagation();
+					if(e.cancelable === false) {
+						this.clickCancelable = false;
+					}else {
+						e.preventDefault();
+						e.stopPropagation();
+					}
 				}
 				break;
 		}
